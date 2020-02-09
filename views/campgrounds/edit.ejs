@@ -1,0 +1,66 @@
+<% include ../partials/header %>
+        <div class="container">
+            <div class="my-container">
+                <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>Edit Campground</legend>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3">
+                                <label for="name">Issue Faced *</label>
+                            </div>
+                            <div class="form-group col-sm-12 col-md-9">
+                                <input class="form-control" type="text" name="name" value="<%= campground.name %>" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3">
+                                <label for="price">ID *</label>
+                            </div>
+                            <div class="form-group col-sm-12 col-md-9">
+                                <input class="form-control" type="number" name="price" value="<%= campground.price %>" min="0" step="5" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3">
+                                <label for="currentImage">Current Image</label>
+                            </div>
+                            <div class="col-sm-12 col-md-9">
+                                <div class="thumbnail">
+                                    <img src="<%= campground.image %>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3">
+                                <label for="image">Change Image</label>
+                            </div>
+                            <div class="form-group col-sm-12 col-md-9">
+                                <input type="file" id="image" name="image" value="<%= campground.image %>" accept="image/*">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3">
+                                <label for="location">Location *</label>
+                            </div>
+                            <div class="form-group col-sm-12 col-md-9">
+                                <input class="form-control" type="text" name="location" id="location" value="<%= campground.location %>">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3">
+                                <label for="desc">Description</label>
+                            </div>
+                            <div class="form-group col-sm-12 col-md-9">
+                                <textarea class="form-control" id="desc" name="description" placeholder="Use HTML tags to make your content look nice" rows="5"><%= campground.description %></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-primary btn-block">Update</button> <!-- btn-block is used to make button size equal to the size of the input regions specified -->
+                        </div>
+                        * indicates compulsory fields
+                    </fieldset>
+                </form>
+                <a href="/campgrounds/<%= campground._id %>">Cancel</a>
+            </div>
+        </div>
+<% include ../partials/footer %>

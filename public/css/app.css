@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(203, 240, 241);
+}
+
+legend {
+    text-align: center;
+    font-size: 32px;
+}
+
+fieldset {
+    margin-bottom: 10px;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+.delete-form {
+    display: inline;
+}
+
+a {
+    outline: none;
+}
+
+.a-left {
+    float: left;
+}
+
+.a-right {
+    float: right;
+}
+
+.my-container {
+    background-color: #f4f7f9;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 25px auto;
+}
+
+@media screen and (min-width: 975px) {
+    .my-container {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 760px) {
+    #my-login {
+        width: 55%;
+    }
+    #my-reset {
+        width: 60%;
+    }
+}
+
+/* Google Maps */
+#map {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+

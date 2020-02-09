@@ -1,0 +1,56 @@
+<% include ../partials/header %>
+        <div class="container">
+            <div class="my-container">
+                <form action="/campgrounds" method="POST" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>Add an Issue</legend>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3">
+                                <label for="name">Issue Faced *</label>
+                            </div>
+                            <div class="form-group col-sm-12 col-md-9">
+                                <input class="form-control" id="name" type="text" name="name" placeholder="Ella Hotel" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3">
+                                <label for="price">ID *</label>
+                            </div>
+                            <div class="form-group col-sm-12 col-md-9">
+                                <input class="form-control" id="price" type="number" name="price" placeholder="Select a price" min="0" step="5" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3">
+                                <label for="image">Image *</label>
+                            </div>
+                            <div class="form-group col-sm-12 col-md-9">
+                                <input type="file" id="image" name="image" accept="image/*" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3">
+                                <label for="location">Location *</label>
+                            </div>
+                            <div class="form-group col-sm-12 col-md-9">
+                                <input class="form-control" type="text" name="location" id="location" placeholder="Yosemite National Park, CA" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3">
+                                <label for="desc">Description</label>
+                            </div>
+                            <div class="form-group col-sm-12 col-md-9">
+                                <textarea class="form-control" id="desc" name="description" placeholder="Use HTML tags to make your content look nice" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-primary btn-block">Submit</button> <!-- btn-block is used to make button size equal to the size of the input regions specified -->
+                        </div>
+                        * indicates compulsory fields
+                    </fieldset>
+                </form>
+                <a href="/campgrounds">Go Back</a>
+            </div>
+        </div>
+<% include ../partials/footer %>

@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+        <div class="container">
+            <div id="my-login" class="my-container">
+                <form action="/forgot" method="POST">
+                    <fieldset>
+                        <legend>Forgot Password</legend>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="form-group col-sm-12 col-md-9">
+                                <input type="email" id="email" name="email" placeholder="Enter your email address" autofocus="autofocus" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+<% include ./partials/footer %>
